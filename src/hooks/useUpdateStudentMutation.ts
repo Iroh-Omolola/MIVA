@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Student } from "@/type/student";
 import { getStudentQueryKey } from "./useFetchStudentQuery";
 
+// This is the hook to update a student details
 export function useUpdateStudentMutation(id: string) {
       const queryClient = useQueryClient();
   const [errorMessage, setErrorMessage] = useState<string>("");

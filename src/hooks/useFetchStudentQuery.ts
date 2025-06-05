@@ -21,7 +21,7 @@ type UseStudentQueryOptions = Omit<
   "queryKey" | "queryFn"
 >;
 
-
+// This is the hook to fetch a student details
 export function useStudentQuery(id: string, options?: UseStudentQueryOptions) {
   const queryClient = useQueryClient();
   const query = useQuery<Student, Error>({

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FormikValues } from "formik";
 import { LoginResponse, UserProps } from "@/type/auth";
 
+// This is the hook for Login via email and password
 export const useLoginMutation = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
