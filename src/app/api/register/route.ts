@@ -41,8 +41,12 @@ const filePath = path.join(process.cwd(), 'src', 'data', 'users.json');
 
     users.push({ email, password });
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-
+    
+if (process.env.NODE_ENV === 'production') {
+  return NextResponse.json({ message: 'File storage not supported in production' }, { status: 500 });
+}
     return NextResponse.json({ message: 'User registered successfully' }, { status: 201 });
+    
   } catch {
    
     return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
