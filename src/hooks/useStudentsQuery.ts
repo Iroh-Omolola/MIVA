@@ -1,7 +1,7 @@
 import { StudentResponse } from "@/type/student";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-
+// This is the hook to fetch all students
 const fetchStudents = async (
   searchTerm: string,
   page: number

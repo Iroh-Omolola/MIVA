@@ -2,6 +2,8 @@ import { Student } from "@/type/student";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 
+
+// This is the hook to create new student
 export function useCreateStudentMutation() {
   const queryClient = useQueryClient();
   const [errorMessage, setErrorMessage] = useState<string>("");

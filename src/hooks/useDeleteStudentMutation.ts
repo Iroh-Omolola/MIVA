@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
+// This is the hook to delete a student
 export function useDeleteStudentMutation() {
   const queryClient = useQueryClient();
 

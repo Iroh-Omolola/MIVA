@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FormikValues } from "formik";
 import { RegisterResponse, UserProps } from "@/type/auth";
 
+// This is the hook for Register via email and password
 export const useRegisterMutation = () => {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
