@@ -61,7 +61,7 @@ const Students = () => {
     if (isSuccess) {
       onClose();
     }
-  }, [isSuccess]);
+  }, [isSuccess, onClose]);
   if (isLoading || isFetching) {
     return (
       <Center height="100vh">
@@ -162,7 +162,7 @@ const Students = () => {
                             </AlertDialogHeader>
 
                             <AlertDialogBody className="text-black">
-                              Are you sure? You can't undo this action
+                              Are you sure? You can not undo this action
                               afterwards.
                             </AlertDialogBody>
 
@@ -252,7 +252,7 @@ const Students = () => {
                       </AlertDialogHeader>
 
                       <AlertDialogBody className="text-black">
-                        Are you sure? You can't undo this action afterwards.
+                        Are you sure? You can not undo this action afterwards.
                       </AlertDialogBody>
 
                       <AlertDialogFooter>

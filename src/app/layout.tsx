@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ChakraProvider } from "@chakra-ui/react";
 import "./globals.css";
 import { Providers } from "./providers";
 

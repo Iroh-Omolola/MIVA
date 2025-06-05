@@ -47,7 +47,7 @@ const Register = () => {
         validate={validateAuthFields}
         onSubmit={(values) => onRegister(values)}
       >
-        {({ values, setFieldValue }) => (
+        {() => (
           <Form className="w-full  space-y-4 h-fit bg-white  p-[40px] rounded-[8px]">
             {errorMessage !== "" && (
               <Alert status="error">

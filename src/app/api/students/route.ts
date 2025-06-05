@@ -37,7 +37,7 @@ export async function GET(req: Request) {
       totalPages,
       students: paginatedStudents,
     }, { status: 200 });
-  } catch (error) {
+  } catch  {
     return NextResponse.json({ message: "Error fetching students." }, { status: 500 });
   }
 }
@@ -88,7 +88,7 @@ export async function POST(req: Request) {
     students.push(newStudent);
 
     return NextResponse.json({ message: "Student added!", student: newStudent }, { status: 201 });
-  } catch (error) {
+  } catch  {
     return NextResponse.json({ message: "Error adding student." }, { status: 500 });
   }
 }

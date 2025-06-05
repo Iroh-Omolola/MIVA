@@ -1,8 +1,8 @@
+import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 const validatePage = <P extends object>(WrappedComponent: React.ComponentType<P>) => {
-  return (props: P) => {
+  const Wrapper = (props: P) => {
     const router = useRouter();
 
     useEffect(() => {
@@ -14,6 +14,11 @@ const validatePage = <P extends object>(WrappedComponent: React.ComponentType<P>
 
     return <WrappedComponent {...props} />;
   };
+
+  // Add a display name for better debugging
+  Wrapper.displayName = `validatePage(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
+
+  return Wrapper;
 };
 
 export default validatePage;

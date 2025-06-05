@@ -43,7 +43,7 @@ const filePath = path.join(process.cwd(), 'src', 'data', 'users.json');
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 
     return NextResponse.json({ message: 'User registered successfully' }, { status: 201 });
-  } catch (error) {
+  } catch {
    
     return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
   }

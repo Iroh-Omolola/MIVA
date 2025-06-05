@@ -49,7 +49,7 @@ const Login = () => {
         validate={validateAuthFields}
         onSubmit={(values) => onLogin(values)}
       >
-        {({ values, setFieldValue }) => (
+        {() => (
           <Form className="w-full  space-y-4 h-fit bg-white  p-[40px] rounded-[8px]">
             {errorMessage !== "" && (
               <Alert status="error">
@@ -130,7 +130,7 @@ const Login = () => {
               Login
             </Button>
             <Text className="text-black font-medium text-center">
-              You don't have an account?{" "}
+              You do not have an account?{" "}
               <Link
                 className="text-miva-blue font-medium underline"
                 href={`/auth/register`}

@@ -1,4 +1,4 @@
-import { StudentResponse, Student } from "@/type/student";
+import { StudentResponse } from "@/type/student";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 

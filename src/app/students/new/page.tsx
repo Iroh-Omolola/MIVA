@@ -48,7 +48,7 @@ const CreateStudent = () => {
             createStudent(values);
           }}
         >
-          {({ values, setFieldValue }) => (
+          {({  setFieldValue }) => (
             <Form className="bg-white w-[95%] md:w-[50%] p-10 shadow-lg space-y-4 rounded-md ">
               {errorMessage !=="" && (
                 <Alert status="error">
